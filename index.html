@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noche Lluviosa</title>
+    
+    <!-- CSS dentro del HTML -->
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Fondo nocturno */
+        body {
+            height: 100vh;
+            background: linear-gradient(to bottom, #0b0c29, #2c3e50);
+            color: #f0f0f0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Contenedor de historia */
+        .story-container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Títulos */
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #a3c9f1;
+        }
+
+        /* Párrafos */
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+
+        /* Animación de lluvia */
+        .rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.2),
+                rgba(255, 255, 255, 0.2) 1px,
+                transparent 1px,
+                transparent 4px
+            );
+            background-size: 2px 10px;
+            pointer-events: none;
+            animation: fall 0.5s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { background-position: 0 -10px; }
+            100% { background-position: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="rain"></div>
+    <div class="story-container">
+        <h1>Noche Lluviosa</h1>
+        <p>
+            La lluvia caía suavemente sobre las calles desiertas, 
+            iluminadas solo por el resplandor de los faroles. 
+            Cada gota era un suspiro del cielo, un secreto susurrado a la noche. 
+            Caminaba sola, abrazando el aroma fresco de la tierra mojada, 
+            mientras los recuerdos danzaban entre relámpagos y sombras.
+        </p>
+        <p>
+            Era una noche perfecta para perderse en pensamientos y sueños, 
+            para dejar que el corazón hablara en silencio, acompañado del ritmo hipnótico de la lluvia.
+        </p>
+    </div>
+</body>
+</html>
